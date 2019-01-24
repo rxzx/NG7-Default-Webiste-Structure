@@ -4,12 +4,22 @@ import { MainSideMenuComponent } from './main-side-menu/main-side-menu.component
 import { BookAShipmentComponent } from './book-a-shipment/book-a-shipment.component';
 import { ShellComponent } from './shell.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { HeaderComponent } from './header/header.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     ShellComponent,
     MainSideMenuComponent,
-    BookAShipmentComponent
+    BookAShipmentComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideMenuComponent,
+    TopbarComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

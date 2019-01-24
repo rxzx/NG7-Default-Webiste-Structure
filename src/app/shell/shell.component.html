@@ -1,8 +1,22 @@
-<div class="row" id="shell">
+<!-- <div class="row" id="shell">
   <div class="col-md-9">
     <router-outlet></router-outlet>
   </div>
   <div class="col-md-3">
     <app-main-side-menu></app-main-side-menu>
   </div>
+</div> -->
+
+
+
+<app-header></app-header>
+<app-topbar></app-topbar>
+
+
+<!-- page content -->
+<div class="right_col" role="main">
+  <router-outlet></router-outlet>
 </div>
+
+<app-footer></app-footer>
+
