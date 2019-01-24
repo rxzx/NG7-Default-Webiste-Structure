@@ -1,3 +1,33 @@
-<p>
-  book-a-shipment works!
-</p>
+<div id="book-a-shipment" class="container">
+  <div class="col-md-10">
+    <div class="col-xs-12">
+      <ul class="list-inline catOne">
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12">
+      <ul class="list-inline">
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+        <li class="list-inline-item active"><a href="javascript:;">Ctegory</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12">
+      
+    </div>
+    <div class="col-md-12">
+      <div class="col-xs-2 myCard" *ngFor="let item of list;">
+        <img [src]="item.ContainerSpecImage" class="cardImage">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-2">
+
+  </div>
+</div>

@@ -5,7 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShellModule } from './shell/shell.module';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HttpServiceProvider } from './providers/http.service';
+import { AppHttpInterceptor } from './app-http-intercerceptor';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,15 @@ import { HttpClient } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ShellModule
+    ShellModule,
+    HttpClientModule
   ],
   providers: [
-    HttpClient,
-    // HttpServiceProvider,
+    // HttpClient,
+    HttpClientModule,
+    HttpServiceProvider,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
-    // { provide: HTTP_INTERCEPTORS, useClass: AppHttpInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AppHttpInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
   schemas: [
